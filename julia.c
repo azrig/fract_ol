@@ -6,7 +6,7 @@
 /*   By: azrig <azrig@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:04:01 by azrig             #+#    #+#             */
-/*   Updated: 2025/04/19 19:04:03 by azrig            ###   ########.fr       */
+/*   Updated: 2025/04/19 19:33:55 by azrig            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ void	ft_render_julia(t_fractol *f)
 		x = 0;
 		while (x < WIDTH)
 		{
-			z.r = ft_rescale((double)x, 0, WIDTH, -2.0, 2.0) * f->zoom;
-			z.i = ft_rescale((double)y, 0, HEIGHT, -2.0, 2.0) * f->zoom;
+			z.r = ft_rescale((double)x, WIDTH, -2.0, 2.0) * f->zoom;	   //(double)x * ())
+			z.i = ft_rescale((double)y, HEIGHT, -2.0, 2.0) * f->zoom;   //(v - 0) * (2 - (-2)) / WIDTH - 2          // (x * 4.0 / WIDTH) - 2
 			nb_iter = julia_set(c, z);
 			my_pixel_put(f, x, HEIGHT - y, get_color(nb_iter));
 			x++;

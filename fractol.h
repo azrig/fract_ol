@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fractol.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azrig <azrig@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/19 19:10:39 by azrig             #+#    #+#             */
+/*   Updated: 2025/04/19 19:33:34 by azrig            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
@@ -6,10 +18,10 @@
 # include <math.h>
 # include "/usr/include/minilibx-linux/mlx.h"
 
-#define WIDTH 800
-#define HEIGHT 800
-#define MAX_ITER 50
-#define ESCAPE_RADIUS 4.0
+# define WIDTH 800
+# define HEIGHT 800
+# define MAX_ITER 50
+# define ESCAPE_RADIUS 4.0
 
 typedef struct s_img
 {
@@ -59,6 +71,6 @@ int		ft_is_double(char *str);
 int		parse_julia_args(char *real, char *imaginary);
 void	print_usage(void);
 int		ft_check_julia_param(char *param);
-double	ft_rescale(double v, double o_min, double o_max, double n_min, double n_max);
+double	ft_rescale(double v, double o_max, double n_min, double n_max);
 
 #endif

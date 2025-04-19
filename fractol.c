@@ -6,7 +6,7 @@
 /*   By: azrig <azrig@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:04:11 by azrig             #+#    #+#             */
-/*   Updated: 2025/04/19 19:04:13 by azrig            ###   ########.fr       */
+/*   Updated: 2025/04/19 19:10:26 by azrig            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	ci_strcmp(const char *s1, const char *s2)
 {
-	int i;
-	char c1;
-	char c2;
+	int		i;
+	char	c1;
+	char	c2;
 
 	i = 0;
 	while (s1[i] && s2[i])

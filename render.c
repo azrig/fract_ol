@@ -6,7 +6,7 @@
 /*   By: azrig <azrig@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:05:00 by azrig             #+#    #+#             */
-/*   Updated: 2025/04/19 19:05:03 by azrig            ###   ########.fr       */
+/*   Updated: 2025/04/19 19:33:21 by azrig            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	get_color(int iteration)
 	r = (int)(255 * fabs(sin(3.0 * M_PI * t)));
 	g = (int)(255 * fabs(sin(3.0 * M_PI * t + 2 * M_PI / 3)));
 	b = (int)(255 * fabs(sin(3.0 * M_PI * t + 4 * M_PI / 3)));
-	
 	return ((r << 16) | (g << 8) | b);
 }
 
@@ -46,7 +45,7 @@ void	ft_render(t_fractol *f)
 		ft_render_julia(f);
 }
 
-double	ft_rescale(double v, double o_min, double o_max, double n_min, double n_max)
+double	ft_rescale(double v, double o_max, double n_min, double n_max)
 {
-	return ((v - o_min) * (n_max - n_min) / (o_max - o_min) + n_min);
+	return (v * (n_max - n_min) / o_max + n_min);
 }

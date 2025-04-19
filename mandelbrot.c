@@ -6,7 +6,7 @@
 /*   By: azrig <azrig@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:04:37 by azrig             #+#    #+#             */
-/*   Updated: 2025/04/19 19:04:42 by azrig            ###   ########.fr       */
+/*   Updated: 2025/04/19 19:34:02 by azrig            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ void	ft_render_mandelbrot(t_fractol *f)
 		x = 0;
 		while (x < WIDTH)
 		{
-			c.r = ft_rescale((double)x, 0, WIDTH, -2.0, 2.0) * f->zoom;
-			c.i = ft_rescale((double)y, 0, HEIGHT, -2.0, 2.0) * f->zoom;
+			c.r = ft_rescale((double)x, WIDTH, -2.0, 2.0) * f->zoom;
+			c.i = ft_rescale((double)y, HEIGHT, -2.0, 2.0) * f->zoom;
 			nb_iter = mandelbrot_set(c);
-			my_pixel_put(f, x, y, get_color(nb_iter));
+			my_pixel_put(f, x, HEIGHT - y, get_color(nb_iter));
 			x++;
 		}
 		y++;
