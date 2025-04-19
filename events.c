@@ -16,10 +16,6 @@ int	handle_key(int keycode, t_fractol *f)
 {
 	if (keycode == 65307)
 		handle_close(f);
-	/* Color scheme toggling disabled - using psychedelic scheme only
-	else if (keycode == 99) // 'c' key for color toggle
-		toggle_color_scheme(f);
-	*/
 	return (0);
 }
 

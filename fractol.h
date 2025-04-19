@@ -60,8 +60,5 @@ int		parse_julia_args(char *real, char *imaginary);
 void	print_usage(void);
 int		ft_check_julia_param(char *param);
 double	ft_rescale(double v, double o_min, double o_max, double n_min, double n_max);
-/* Function not used - using psychedelic scheme only
-void	toggle_color_scheme(t_fractol *f);
-*/
 
 #endif

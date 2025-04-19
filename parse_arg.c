@@ -20,15 +20,9 @@ int	parse_julia_args(char *real, char *img)
 	r = ft_check_julia_param(real);
 	i = ft_check_julia_param(img);
 	if (r == 1 || i == 1)
-	{
-		ft_putstr_fd("Error: Julia parameters must be valid decimal numbers\n", 2);
 		return (1);
-	}
 	else if (r == 2 || i == 2)
-	{
-		ft_putstr_fd("Error: Julia parameters should be between -2.0 and 2.0\n", 2);
 		return (1);
-	}
 	return (0);
 }
 
