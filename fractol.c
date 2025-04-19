@@ -6,7 +6,7 @@
 /*   By: azrig <azrig@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:04:11 by azrig             #+#    #+#             */
-/*   Updated: 2025/04/19 19:10:26 by azrig            ###   ########.fr       */
+/*   Updated: 2025/04/19 19:38:59 by azrig            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ int	main(int ac, char **av)
 		f.name = "Mandelbrot";
 		ft_mandelbrot(&f);
 	}
-	else if (ci_strcmp(av[1], "julia") && ac == 4 && !parse_julia_args(av[2], av[3]))
+	else if (ci_strcmp(av[1], "julia")
+		&& ac == 4 && !parse_julia_args(av[2], av[3]))
 	{
 		f.name = "Julia";
 		ft_julia(&f, av[2], av[3]);
