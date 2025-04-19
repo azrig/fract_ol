@@ -39,7 +39,7 @@ void	ft_render_julia(t_fractol *f)
 			z.r = ft_rescale((double)x, 0, WIDTH, -2.0, 2.0) * f->zoom;
 			z.i = ft_rescale((double)y, 0, HEIGHT, -2.0, 2.0) * f->zoom;
 			nb_iter = julia_set(c, z);
-			my_pixel_put(f, x, y, get_color(nb_iter));
+			my_pixel_put(f, x, HEIGHT - y, get_color(nb_iter));
 			x++;
 		}
 		y++;
