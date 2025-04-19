@@ -6,12 +6,11 @@
 /*   By: azrig <azrig@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:05:00 by azrig             #+#    #+#             */
-/*   Updated: 2025/04/19 19:33:21 by azrig            ###   ########.fr       */
+/*   Updated: 2025/04/19 21:06:56 by azrig            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-#include <stdio.h>
 
 int	get_color(int iteration)
 {
